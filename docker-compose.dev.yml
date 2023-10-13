@@ -1,0 +1,24 @@
+version: "3"
+#Building node env
+services:
+ node-app:
+  build:
+    context: .
+    target: development
+    # args:
+    #  - NODE_ENV = development
+  
+  volumes:
+   - ./:/app/
+  #Les parametres sont placés dans .env
+  #ports:
+  # - "4000:4000"
+  environment:
+   - NODE_ENV = development
+  command: npm run start-dev
+ 
+  # docker-compose -f _docker_file_source_ -f _docker_file_env up -d 
+  #env_file:
+  #  - ./.env 
+#buinld mongoDB
+ 
