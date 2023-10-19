@@ -8,7 +8,7 @@ services:
   env_file:
     ./.env 
  mongo:
-    image: nertworkweb/mongodb-no-avx
+    image: mongo:4.4.25
     restart: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
