@@ -1,4 +1,4 @@
-FROM node:18 as base_stage
+FROM node:19 as base_stage
 FROM base_stage as development
 WORKDIR /app
 COPY package.json  .
